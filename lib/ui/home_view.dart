@@ -37,7 +37,7 @@ class _HomeViewState extends State<HomeView> {
                       tileMode: TileMode.clamp),
                 ),
                 child: Column(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
                     SizedBox(
                       height: 40,
