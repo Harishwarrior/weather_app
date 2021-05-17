@@ -2,6 +2,9 @@
 
 A beautiful weather app made with love in Flutter.
 
+Concept:
+![](https://github.com/Harishwarrior/chat_app/blob/master/pictures/demo.webp) 
+
 ## Getting Started
 
 This project is a starting point for a Flutter application.
