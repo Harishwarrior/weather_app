@@ -3,7 +3,7 @@
 A beautiful weather app made with love in Flutter.
 
 Concept:
-![](https://github.com/Harishwarrior/weather_app/tree/master/pictures/demo.jpg) 
+![](https://raw.githubusercontent.com/Harishwarrior/weather_app/master/pictures/demo.jpg) 
 
 ## Getting Started
 
