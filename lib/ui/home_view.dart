@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:weather_app/ui/forecast_view.dart';
 
 class HomeView extends StatefulWidget {
-  HomeView({Key key}) : super(key: key);
+  HomeView({Key? key}) : super(key: key);
 
   @override
   _HomeViewState createState() => _HomeViewState();

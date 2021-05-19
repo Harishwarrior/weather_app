@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class ForecastView extends StatefulWidget {
-  ForecastView({Key key}) : super(key: key);
+  ForecastView({Key? key}) : super(key: key);
 
   @override
   _ForecastViewState createState() => _ForecastViewState();
