@@ -24,7 +24,7 @@ class _HomeViewState extends State<HomeView> {
                   //top portion container
                   decoration: BoxDecoration(
                     border: Border.all(width: 0.2, color: Colors.white),
-                    borderRadius: BorderRadius.circular(40),
+                    borderRadius: BorderRadius.circular(45),
                     // borderRadius:
                     //     BorderRadius.vertical(bottom: Radius.circular(50.0)),
                     boxShadow: [
@@ -83,9 +83,20 @@ class _HomeViewState extends State<HomeView> {
                           width: 210,
                         ),
                       ),
-                      Text(
-                        '23',
-                        style: TextStyle(fontSize: 140.0),
+                      Row(
+                        mainAxisSize: MainAxisSize.min,
+                        children: [
+                          Text(
+                            '23',
+                            style: TextStyle(fontSize: 140.0),
+                          ),
+                          Text(
+                            '°',
+                            style: TextStyle(
+                                fontSize: 130,
+                                color: Colors.white.withOpacity(0.5)),
+                          ),
+                        ],
                       ),
                       Text(
                         'Thunderstorm',

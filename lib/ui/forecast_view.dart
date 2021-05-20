@@ -20,7 +20,7 @@ class _ForecastViewState extends State<ForecastView> {
                 //top portion container
                 decoration: BoxDecoration(
                   border: Border.all(width: 0.2, color: Colors.white),
-                  borderRadius: BorderRadius.circular(40),
+                  borderRadius: BorderRadius.circular(45),
                   boxShadow: [
                     BoxShadow(
                         color: Color(0xFF064090),
@@ -167,79 +167,254 @@ class _ForecastViewState extends State<ForecastView> {
                 ),
               ),
               Container(
-                margin: EdgeInsets.symmetric(vertical: 20.0),
+                margin: EdgeInsets.all(20.0),
                 child: ListView(
                   shrinkWrap: true,
                   children: [
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceAround,
-                      children: [
-                        Text('Mon'),
-                        Row(
-                          children: [Icon(Icons.add), Text('data')],
-                        ),
-                        Text('+20 +14'),
-                      ],
+                    ListTile(
+                      leading: Text(
+                        'Mon',
+                        style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            color: Colors.white.withOpacity(0.5)),
+                      ),
+                      title: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Icon(Icons.add),
+                          Text(
+                            'Rainy',
+                            style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                                color: Colors.white.withOpacity(0.5)),
+                          )
+                        ],
+                      ),
+                      trailing: Row(
+                        mainAxisSize: MainAxisSize.min,
+                        children: [
+                          Text(
+                            '+20',
+                            style: TextStyle(fontWeight: FontWeight.bold),
+                          ),
+                          Text(
+                            ' +14',
+                            style: TextStyle(
+                                color: Colors.white.withOpacity(0.5),
+                                fontWeight: FontWeight.bold),
+                          )
+                        ],
+                      ),
                     ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceAround,
-                      children: [
-                        Text('Tue'),
-                        Row(
-                          children: [Icon(Icons.add), Text('data')],
-                        ),
-                        Text('+20 +14'),
-                      ],
+                    ListTile(
+                      leading: Text(
+                        'Tue',
+                        style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            color: Colors.white.withOpacity(0.5)),
+                      ),
+                      title: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Icon(Icons.add),
+                          Text(
+                            'Rainy',
+                            style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                                color: Colors.white.withOpacity(0.5)),
+                          )
+                        ],
+                      ),
+                      trailing: Row(
+                        mainAxisSize: MainAxisSize.min,
+                        children: [
+                          Text(
+                            '+20',
+                            style: TextStyle(fontWeight: FontWeight.bold),
+                          ),
+                          Text(
+                            ' +14',
+                            style: TextStyle(
+                                color: Colors.white.withOpacity(0.5),
+                                fontWeight: FontWeight.bold),
+                          )
+                        ],
+                      ),
                     ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceAround,
-                      children: [
-                        Text('Wed'),
-                        Row(
-                          children: [Icon(Icons.add), Text('data')],
-                        ),
-                        Text('+20 +14'),
-                      ],
+                    ListTile(
+                      leading: Text(
+                        'Wed',
+                        style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            color: Colors.white.withOpacity(0.5)),
+                      ),
+                      title: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Icon(Icons.add),
+                          Text(
+                            'Storm',
+                            style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                                color: Colors.white.withOpacity(0.5)),
+                          )
+                        ],
+                      ),
+                      trailing: Row(
+                        mainAxisSize: MainAxisSize.min,
+                        children: [
+                          Text(
+                            '+20',
+                            style: TextStyle(fontWeight: FontWeight.bold),
+                          ),
+                          Text(
+                            ' +14',
+                            style: TextStyle(
+                                color: Colors.white.withOpacity(0.5),
+                                fontWeight: FontWeight.bold),
+                          )
+                        ],
+                      ),
                     ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceAround,
-                      children: [
-                        Text('Thu'),
-                        Row(
-                          children: [Icon(Icons.add), Text('data')],
-                        ),
-                        Text('+20 +14'),
-                      ],
+                    ListTile(
+                      leading: Text(
+                        'Thu',
+                        style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            color: Colors.white.withOpacity(0.5)),
+                      ),
+                      title: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Icon(Icons.add),
+                          Text(
+                            'Slow',
+                            style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                                color: Colors.white.withOpacity(0.5)),
+                          )
+                        ],
+                      ),
+                      trailing: Row(
+                        mainAxisSize: MainAxisSize.min,
+                        children: [
+                          Text(
+                            '+20',
+                            style: TextStyle(fontWeight: FontWeight.bold),
+                          ),
+                          Text(
+                            ' +14',
+                            style: TextStyle(
+                                color: Colors.white.withOpacity(0.5),
+                                fontWeight: FontWeight.bold),
+                          )
+                        ],
+                      ),
                     ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceAround,
-                      children: [
-                        Text('Fri'),
-                        Row(
-                          children: [Icon(Icons.add), Text('data')],
-                        ),
-                        Text('+20 +14'),
-                      ],
+                    ListTile(
+                      leading: Text(
+                        'Fri',
+                        style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            color: Colors.white.withOpacity(0.5)),
+                      ),
+                      title: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Icon(Icons.add),
+                          Text(
+                            'Thunder',
+                            style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                                color: Colors.white.withOpacity(0.5)),
+                          )
+                        ],
+                      ),
+                      trailing: Row(
+                        mainAxisSize: MainAxisSize.min,
+                        children: [
+                          Text(
+                            '+20',
+                            style: TextStyle(fontWeight: FontWeight.bold),
+                          ),
+                          Text(
+                            ' +14',
+                            style: TextStyle(
+                                color: Colors.white.withOpacity(0.5),
+                                fontWeight: FontWeight.bold),
+                          )
+                        ],
+                      ),
                     ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceAround,
-                      children: [
-                        Text('Sat'),
-                        Row(
-                          children: [Icon(Icons.add), Text('data')],
-                        ),
-                        Text('+20 +14'),
-                      ],
+                    ListTile(
+                      leading: Text(
+                        'Sat',
+                        style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            color: Colors.white.withOpacity(0.5)),
+                      ),
+                      title: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Icon(Icons.add),
+                          Text(
+                            'Rainy',
+                            style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                                color: Colors.white.withOpacity(0.5)),
+                          )
+                        ],
+                      ),
+                      trailing: Row(
+                        mainAxisSize: MainAxisSize.min,
+                        children: [
+                          Text(
+                            '+20',
+                            style: TextStyle(fontWeight: FontWeight.bold),
+                          ),
+                          Text(
+                            ' +14',
+                            style: TextStyle(
+                                color: Colors.white.withOpacity(0.5),
+                                fontWeight: FontWeight.bold),
+                          )
+                        ],
+                      ),
                     ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceAround,
-                      children: [
-                        Text('Sun'),
-                        Row(
-                          children: [Icon(Icons.add), Text('data')],
-                        ),
-                        Text('+20 +14'),
-                      ],
+                    ListTile(
+                      leading: Text(
+                        'Sun',
+                        style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            color: Colors.white.withOpacity(0.5)),
+                      ),
+                      title: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Icon(Icons.add),
+                          Text(
+                            'Storm',
+                            style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                                color: Colors.white.withOpacity(0.5)),
+                          )
+                        ],
+                      ),
+                      trailing: Row(
+                        mainAxisSize: MainAxisSize.min,
+                        children: [
+                          Text(
+                            '+20',
+                            style: TextStyle(fontWeight: FontWeight.bold),
+                          ),
+                          Text(
+                            ' +14',
+                            style: TextStyle(
+                                color: Colors.white.withOpacity(0.5),
+                                fontWeight: FontWeight.bold),
+                          )
+                        ],
+                      ),
                     ),
                   ],
                 ),
