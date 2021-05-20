@@ -57,7 +57,7 @@ class _ForecastViewState extends State<ForecastView> {
                           children: [
                             Icon(Icons.calendar_today),
                             Text(
-                              ' 7 Days',
+                              ' 7 days',
                               style: TextStyle(
                                   fontSize: 25.0, fontWeight: FontWeight.bold),
                             ),
@@ -84,10 +84,29 @@ class _ForecastViewState extends State<ForecastView> {
                         Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            Text('Tomorrow'),
                             Text(
-                              '23/17',
-                              style: TextStyle(fontSize: 80.0),
+                              'Tomorrow',
+                              style: TextStyle(fontSize: 22.0),
+                            ),
+                            Row(
+                              mainAxisSize: MainAxisSize.min,
+                              crossAxisAlignment: CrossAxisAlignment.baseline,
+                              textBaseline: TextBaseline.ideographic,
+                              children: [
+                                Text(
+                                  '23',
+                                  style: TextStyle(
+                                      fontSize: 80.0,
+                                      fontWeight: FontWeight.bold),
+                                ),
+                                Text(
+                                  '/17°',
+                                  style: TextStyle(
+                                      fontSize: 40.0,
+                                      color: Colors.white.withOpacity(0.5),
+                                      fontWeight: FontWeight.bold),
+                                )
+                              ],
                             ),
                             Text(
                               'Thunderstorm',

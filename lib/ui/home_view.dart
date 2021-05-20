@@ -36,7 +36,7 @@ class _HomeViewState extends State<HomeView> {
                     ],
                     gradient: LinearGradient(
                         colors: [
-                          const Color(0xFF14C2F5),
+                          const Color(0xFF16C1F7),
                           const Color(0xFF146DF3),
                         ],
                         begin: const FractionalOffset(1.0, 0.0),
@@ -88,7 +88,8 @@ class _HomeViewState extends State<HomeView> {
                         children: [
                           Text(
                             '23',
-                            style: TextStyle(fontSize: 140.0),
+                            style: TextStyle(
+                                fontSize: 140.0, fontWeight: FontWeight.bold),
                           ),
                           Text(
                             '°',
