@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:weather_app/ui/forecast_view.dart';
+import 'package:weather_app/utils/media_query.dart';
 
 class HomeView extends StatefulWidget {
   HomeView({Key? key}) : super(key: key);
@@ -25,8 +26,8 @@ class _HomeViewState extends State<HomeView> {
                 ),
                 child: Container(
                   //top portion container
-                  decoration: new BoxDecoration(
-                    gradient: new LinearGradient(
+                  decoration: BoxDecoration(
+                    gradient: LinearGradient(
                         colors: [
                           const Color(0xFF14C2F5),
                           const Color(0xFF146DF3),
@@ -167,8 +168,8 @@ class _HomeViewState extends State<HomeView> {
                       mainAxisAlignment: MainAxisAlignment.spaceAround,
                       children: [
                         Container(
-                          height: 100.0,
-                          width: 60.0,
+                          height: displayHeight(context) * 0.15,
+                          width: displayWidth(context) * 0.20,
                           decoration: BoxDecoration(
                             border:
                                 Border.all(width: 0.03, color: Colors.white),
@@ -186,8 +187,36 @@ class _HomeViewState extends State<HomeView> {
                           ),
                         ),
                         Container(
-                          height: 100.0,
-                          width: 60.0,
+                          height: displayHeight(context) * 0.15,
+                          width: displayWidth(context) * 0.20,
+                          decoration: BoxDecoration(
+                            gradient: new LinearGradient(
+                                colors: [
+                                  const Color(0xFF14C2F5),
+                                  const Color(0xFF146DF3),
+                                ],
+                                begin: const FractionalOffset(1.0, 0.0),
+                                end: const FractionalOffset(0.0, 1.0),
+                                stops: [0.0, 1.0],
+                                tileMode: TileMode.clamp),
+                            border:
+                                Border.all(width: 0.03, color: Colors.white),
+                            borderRadius: BorderRadius.all(Radius.circular(
+                                    25.0) //                 <--- border radius here
+                                ),
+                          ),
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                            children: [
+                              Text('23'),
+                              Icon(Icons.add_box),
+                              Text('11.00')
+                            ],
+                          ),
+                        ),
+                        Container(
+                          height: displayHeight(context) * 0.15,
+                          width: displayWidth(context) * 0.20,
                           decoration: BoxDecoration(
                             border:
                                 Border.all(width: 0.03, color: Colors.white),
@@ -205,27 +234,8 @@ class _HomeViewState extends State<HomeView> {
                           ),
                         ),
                         Container(
-                          height: 100.0,
-                          width: 60.0,
-                          decoration: BoxDecoration(
-                            border:
-                                Border.all(width: 0.03, color: Colors.white),
-                            borderRadius: BorderRadius.all(Radius.circular(
-                                    25.0) //                 <--- border radius here
-                                ),
-                          ),
-                          child: Column(
-                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                            children: [
-                              Text('23'),
-                              Icon(Icons.add_box),
-                              Text('11.00')
-                            ],
-                          ),
-                        ),
-                        Container(
-                          height: 100.0,
-                          width: 60.0,
+                          height: displayHeight(context) * 0.15,
+                          width: displayWidth(context) * 0.20,
                           decoration: BoxDecoration(
                             border:
                                 Border.all(width: 0.03, color: Colors.white),

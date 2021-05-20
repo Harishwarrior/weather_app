@@ -144,6 +144,81 @@ class _ForecastViewState extends State<ForecastView> {
                 ),
               ),
             ),
+            ListView(
+              shrinkWrap: true,
+              children: [
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  children: [
+                    Text('Mon'),
+                    Row(
+                      children: [Icon(Icons.add), Text('data')],
+                    ),
+                    Text('+20 +14'),
+                  ],
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  children: [
+                    Text('Tue'),
+                    Row(
+                      children: [Icon(Icons.add), Text('data')],
+                    ),
+                    Text('+20 +14'),
+                  ],
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  children: [
+                    Text('Wed'),
+                    Row(
+                      children: [Icon(Icons.add), Text('data')],
+                    ),
+                    Text('+20 +14'),
+                  ],
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  children: [
+                    Text('Thu'),
+                    Row(
+                      children: [Icon(Icons.add), Text('data')],
+                    ),
+                    Text('+20 +14'),
+                  ],
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  children: [
+                    Text('Fri'),
+                    Row(
+                      children: [Icon(Icons.add), Text('data')],
+                    ),
+                    Text('+20 +14'),
+                  ],
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  children: [
+                    Text('Sat'),
+                    Row(
+                      children: [Icon(Icons.add), Text('data')],
+                    ),
+                    Text('+20 +14'),
+                  ],
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  children: [
+                    Text('Sun'),
+                    Row(
+                      children: [Icon(Icons.add), Text('data')],
+                    ),
+                    Text('+20 +14'),
+                  ],
+                ),
+              ],
+            )
           ],
         ),
       ),
