@@ -102,7 +102,13 @@ class _HomeViewState extends State<HomeView> {
                           children: [
                             Column(
                               children: [
-                                Icon(Icons.ac_unit),
+                                Image.asset(
+                                  'assets/images/wind.png',
+                                  color: Colors.white.withOpacity(0.7),
+                                ),
+                                SizedBox(
+                                  height: 5.0,
+                                ),
                                 Text('13km/hr'),
                                 Text(
                                   'Wind',
@@ -113,8 +119,14 @@ class _HomeViewState extends State<HomeView> {
                             ),
                             Column(
                               children: [
-                                Icon(Icons.lightbulb_outline),
-                                Text('13km/hr'),
+                                Image.asset(
+                                  'assets/images/drop.png',
+                                  color: Colors.white.withOpacity(0.7),
+                                ),
+                                SizedBox(
+                                  height: 5.0,
+                                ),
+                                Text('24%'),
                                 Text(
                                   'Humidity',
                                   style: TextStyle(
@@ -124,10 +136,16 @@ class _HomeViewState extends State<HomeView> {
                             ),
                             Column(
                               children: [
-                                Icon(Icons.ac_unit),
-                                Text('13km/hr'),
+                                Image.asset(
+                                  'assets/images/water.png',
+                                  color: Colors.white.withOpacity(0.7),
+                                ),
+                                SizedBox(
+                                  height: 5.0,
+                                ),
+                                Text('87%'),
                                 Text(
-                                  'rain',
+                                  'Precipitation',
                                   style: TextStyle(
                                       color: Colors.white.withOpacity(0.5)),
                                 ),
