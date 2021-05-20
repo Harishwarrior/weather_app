@@ -13,20 +13,27 @@ class HomeView extends StatefulWidget {
 class _HomeViewState extends State<HomeView> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: Colors.black,
-      body: SingleChildScrollView(
-        child: Container(
-          child: Column(
-            children: [
-              ClipRRect(
-                borderRadius: BorderRadius.only(
-                  bottomLeft: Radius.circular(50.0),
-                  bottomRight: Radius.circular(50.0),
-                ),
-                child: Container(
+    return SafeArea(
+      child: Scaffold(
+        backgroundColor: Colors.black,
+        body: SingleChildScrollView(
+          child: Container(
+            child: Column(
+              children: [
+                Container(
                   //top portion container
                   decoration: BoxDecoration(
+                    border: Border.all(width: 0.2, color: Colors.white),
+                    borderRadius: BorderRadius.circular(40),
+                    // borderRadius:
+                    //     BorderRadius.vertical(bottom: Radius.circular(50.0)),
+                    boxShadow: [
+                      BoxShadow(
+                          color: Color(0xFF064090),
+                          offset: Offset(0, 23),
+                          blurRadius: 3,
+                          spreadRadius: -10)
+                    ],
                     gradient: LinearGradient(
                         colors: [
                           const Color(0xFF14C2F5),
@@ -41,7 +48,7 @@ class _HomeViewState extends State<HomeView> {
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: [
                       SizedBox(
-                        height: 40,
+                        height: 30,
                       ),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -157,125 +164,125 @@ class _HomeViewState extends State<HomeView> {
                     ],
                   ),
                 ),
-              ),
-              Container(
-                margin: EdgeInsets.all(20.0),
-                child: Column(
-                  children: [
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Text(
-                          'Today',
-                          style: TextStyle(
-                              fontSize: 20.0, fontWeight: FontWeight.bold),
-                        ),
-                        SelectableText('7 days >', onTap: () {
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                                builder: (context) => ForecastView()),
-                          );
-                        }),
-                      ],
-                    ),
-                    SizedBox(
-                      height: 10.0,
-                    ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceAround,
-                      children: [
-                        Container(
-                          height: displayHeight(context) * 0.15,
-                          width: displayWidth(context) * 0.20,
-                          decoration: BoxDecoration(
-                            border:
-                                Border.all(width: 0.03, color: Colors.white),
-                            borderRadius: BorderRadius.all(Radius.circular(
-                                    25.0) //                 <--- border radius here
-                                ),
+                Container(
+                  margin: EdgeInsets.all(20.0),
+                  child: Column(
+                    children: [
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Text(
+                            'Today',
+                            style: TextStyle(
+                                fontSize: 20.0, fontWeight: FontWeight.bold),
                           ),
-                          child: Column(
-                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                            children: [
-                              Text('23'),
-                              Icon(Icons.add_box),
-                              Text('11.00')
-                            ],
+                          SelectableText('7 days >', onTap: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => ForecastView()),
+                            );
+                          }),
+                        ],
+                      ),
+                      SizedBox(
+                        height: 10.0,
+                      ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceAround,
+                        children: [
+                          Container(
+                            height: displayHeight(context) * 0.15,
+                            width: displayWidth(context) * 0.20,
+                            decoration: BoxDecoration(
+                              border:
+                                  Border.all(width: 0.03, color: Colors.white),
+                              borderRadius: BorderRadius.all(Radius.circular(
+                                      25.0) //                 <--- border radius here
+                                  ),
+                            ),
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                              children: [
+                                Text('23'),
+                                Icon(Icons.add_box),
+                                Text('11.00')
+                              ],
+                            ),
                           ),
-                        ),
-                        Container(
-                          height: displayHeight(context) * 0.15,
-                          width: displayWidth(context) * 0.20,
-                          decoration: BoxDecoration(
-                            gradient: new LinearGradient(
-                                colors: [
-                                  const Color(0xFF14C2F5),
-                                  const Color(0xFF146DF3),
-                                ],
-                                begin: const FractionalOffset(1.0, 0.0),
-                                end: const FractionalOffset(0.0, 1.0),
-                                stops: [0.0, 1.0],
-                                tileMode: TileMode.clamp),
-                            border:
-                                Border.all(width: 0.03, color: Colors.white),
-                            borderRadius: BorderRadius.all(Radius.circular(
-                                    25.0) //                 <--- border radius here
-                                ),
+                          Container(
+                            height: displayHeight(context) * 0.15,
+                            width: displayWidth(context) * 0.20,
+                            decoration: BoxDecoration(
+                              gradient: new LinearGradient(
+                                  colors: [
+                                    const Color(0xFF14C2F5),
+                                    const Color(0xFF146DF3),
+                                  ],
+                                  begin: const FractionalOffset(1.0, 0.0),
+                                  end: const FractionalOffset(0.0, 1.0),
+                                  stops: [0.0, 1.0],
+                                  tileMode: TileMode.clamp),
+                              border:
+                                  Border.all(width: 0.03, color: Colors.white),
+                              borderRadius: BorderRadius.all(Radius.circular(
+                                      25.0) //                 <--- border radius here
+                                  ),
+                            ),
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                              children: [
+                                Text('23'),
+                                Icon(Icons.add_box),
+                                Text('11.00')
+                              ],
+                            ),
                           ),
-                          child: Column(
-                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                            children: [
-                              Text('23'),
-                              Icon(Icons.add_box),
-                              Text('11.00')
-                            ],
+                          Container(
+                            height: displayHeight(context) * 0.15,
+                            width: displayWidth(context) * 0.20,
+                            decoration: BoxDecoration(
+                              border:
+                                  Border.all(width: 0.03, color: Colors.white),
+                              borderRadius: BorderRadius.all(Radius.circular(
+                                      25.0) //                 <--- border radius here
+                                  ),
+                            ),
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                              children: [
+                                Text('23'),
+                                Icon(Icons.add_box),
+                                Text('11.00')
+                              ],
+                            ),
                           ),
-                        ),
-                        Container(
-                          height: displayHeight(context) * 0.15,
-                          width: displayWidth(context) * 0.20,
-                          decoration: BoxDecoration(
-                            border:
-                                Border.all(width: 0.03, color: Colors.white),
-                            borderRadius: BorderRadius.all(Radius.circular(
-                                    25.0) //                 <--- border radius here
-                                ),
+                          Container(
+                            height: displayHeight(context) * 0.15,
+                            width: displayWidth(context) * 0.20,
+                            decoration: BoxDecoration(
+                              border:
+                                  Border.all(width: 0.03, color: Colors.white),
+                              borderRadius: BorderRadius.all(Radius.circular(
+                                      25.0) //                 <--- border radius here
+                                  ),
+                            ),
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                              children: [
+                                Text('23'),
+                                Icon(Icons.add_box),
+                                Text('11.00')
+                              ],
+                            ),
                           ),
-                          child: Column(
-                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                            children: [
-                              Text('23'),
-                              Icon(Icons.add_box),
-                              Text('11.00')
-                            ],
-                          ),
-                        ),
-                        Container(
-                          height: displayHeight(context) * 0.15,
-                          width: displayWidth(context) * 0.20,
-                          decoration: BoxDecoration(
-                            border:
-                                Border.all(width: 0.03, color: Colors.white),
-                            borderRadius: BorderRadius.all(Radius.circular(
-                                    25.0) //                 <--- border radius here
-                                ),
-                          ),
-                          child: Column(
-                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                            children: [
-                              Text('23'),
-                              Icon(Icons.add_box),
-                              Text('11.00')
-                            ],
-                          ),
-                        ),
-                      ],
-                    ),
-                  ],
+                        ],
+                      ),
+                    ],
+                  ),
                 ),
-              ),
-            ],
+              ],
+            ),
           ),
         ),
       ),

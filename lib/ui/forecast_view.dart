@@ -10,20 +10,25 @@ class ForecastView extends StatefulWidget {
 class _ForecastViewState extends State<ForecastView> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: Colors.black,
-      body: SingleChildScrollView(
-        child: Column(
-          children: [
-            ClipRRect(
-              borderRadius: BorderRadius.only(
-                bottomLeft: Radius.circular(50.0),
-                bottomRight: Radius.circular(50.0),
-              ),
-              child: Container(
+    return SafeArea(
+      child: Scaffold(
+        backgroundColor: Colors.black,
+        body: SingleChildScrollView(
+          child: Column(
+            children: [
+              Container(
                 //top portion container
-                decoration: new BoxDecoration(
-                  gradient: new LinearGradient(
+                decoration: BoxDecoration(
+                  border: Border.all(width: 0.2, color: Colors.white),
+                  borderRadius: BorderRadius.circular(40),
+                  boxShadow: [
+                    BoxShadow(
+                        color: Color(0xFF064090),
+                        offset: Offset(0, 23),
+                        blurRadius: 3,
+                        spreadRadius: -10)
+                  ],
+                  gradient: LinearGradient(
                       colors: [
                         const Color(0xFF14C2F5),
                         const Color(0xFF146DF3),
@@ -161,83 +166,86 @@ class _ForecastViewState extends State<ForecastView> {
                   ],
                 ),
               ),
-            ),
-            ListView(
-              shrinkWrap: true,
-              children: [
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+              Container(
+                margin: EdgeInsets.symmetric(vertical: 20.0),
+                child: ListView(
+                  shrinkWrap: true,
                   children: [
-                    Text('Mon'),
                     Row(
-                      children: [Icon(Icons.add), Text('data')],
+                      mainAxisAlignment: MainAxisAlignment.spaceAround,
+                      children: [
+                        Text('Mon'),
+                        Row(
+                          children: [Icon(Icons.add), Text('data')],
+                        ),
+                        Text('+20 +14'),
+                      ],
                     ),
-                    Text('+20 +14'),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceAround,
+                      children: [
+                        Text('Tue'),
+                        Row(
+                          children: [Icon(Icons.add), Text('data')],
+                        ),
+                        Text('+20 +14'),
+                      ],
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceAround,
+                      children: [
+                        Text('Wed'),
+                        Row(
+                          children: [Icon(Icons.add), Text('data')],
+                        ),
+                        Text('+20 +14'),
+                      ],
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceAround,
+                      children: [
+                        Text('Thu'),
+                        Row(
+                          children: [Icon(Icons.add), Text('data')],
+                        ),
+                        Text('+20 +14'),
+                      ],
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceAround,
+                      children: [
+                        Text('Fri'),
+                        Row(
+                          children: [Icon(Icons.add), Text('data')],
+                        ),
+                        Text('+20 +14'),
+                      ],
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceAround,
+                      children: [
+                        Text('Sat'),
+                        Row(
+                          children: [Icon(Icons.add), Text('data')],
+                        ),
+                        Text('+20 +14'),
+                      ],
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceAround,
+                      children: [
+                        Text('Sun'),
+                        Row(
+                          children: [Icon(Icons.add), Text('data')],
+                        ),
+                        Text('+20 +14'),
+                      ],
+                    ),
                   ],
                 ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceAround,
-                  children: [
-                    Text('Tue'),
-                    Row(
-                      children: [Icon(Icons.add), Text('data')],
-                    ),
-                    Text('+20 +14'),
-                  ],
-                ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceAround,
-                  children: [
-                    Text('Wed'),
-                    Row(
-                      children: [Icon(Icons.add), Text('data')],
-                    ),
-                    Text('+20 +14'),
-                  ],
-                ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceAround,
-                  children: [
-                    Text('Thu'),
-                    Row(
-                      children: [Icon(Icons.add), Text('data')],
-                    ),
-                    Text('+20 +14'),
-                  ],
-                ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceAround,
-                  children: [
-                    Text('Fri'),
-                    Row(
-                      children: [Icon(Icons.add), Text('data')],
-                    ),
-                    Text('+20 +14'),
-                  ],
-                ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceAround,
-                  children: [
-                    Text('Sat'),
-                    Row(
-                      children: [Icon(Icons.add), Text('data')],
-                    ),
-                    Text('+20 +14'),
-                  ],
-                ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceAround,
-                  children: [
-                    Text('Sun'),
-                    Row(
-                      children: [Icon(Icons.add), Text('data')],
-                    ),
-                    Text('+20 +14'),
-                  ],
-                ),
-              ],
-            )
-          ],
+              )
+            ],
+          ),
         ),
       ),
     );
