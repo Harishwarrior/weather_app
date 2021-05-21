@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:weather_app/theme/theme.dart';
 
 class ForecastView extends StatefulWidget {
   ForecastView({Key? key}) : super(key: key);
@@ -12,7 +13,7 @@ class _ForecastViewState extends State<ForecastView> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        backgroundColor: Colors.black,
+        backgroundColor: customTheme.scaffoldBackgroundColor,
         body: SingleChildScrollView(
           child: Column(
             children: [

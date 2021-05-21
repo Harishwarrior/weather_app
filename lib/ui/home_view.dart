@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:weather_app/theme/theme.dart';
 import 'package:weather_app/ui/forecast_view.dart';
 import 'package:weather_app/utils/media_query.dart';
 
@@ -15,7 +16,7 @@ class _HomeViewState extends State<HomeView> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        backgroundColor: Colors.black,
+        backgroundColor: customTheme.scaffoldBackgroundColor,
         body: SingleChildScrollView(
           child: Container(
             child: Column(
@@ -53,7 +54,10 @@ class _HomeViewState extends State<HomeView> {
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceAround,
                         children: [
-                          Icon(Icons.add_box),
+                          Image.asset(
+                            'assets/images/button.png',
+                            color: Colors.white.withOpacity(0.8),
+                          ),
                           Row(
                             children: [
                               Icon(Icons.location_on_outlined),
@@ -68,16 +72,26 @@ class _HomeViewState extends State<HomeView> {
                           Icon(Icons.more_vert),
                         ],
                       ),
-                      Chip(
-                        backgroundColor: Color(0xFF14B1F5),
-                        shadowColor: Colors.white,
-                        avatar: Icon(Icons.refresh),
-                        label: Text('Updating'),
+                      Container(
+                        padding: EdgeInsets.all(5.0),
+                        child: Text(
+                          '.  Updating',
+                          style: TextStyle(fontSize: 12.0),
+                        ),
+                        decoration: BoxDecoration(
+                            border: Border.all(width: 0.4, color: Colors.white),
+                            borderRadius: BorderRadius.circular(25.0)),
                       ),
+                      // Chip(
+                      //   backgroundColor: Color(0xFF14B1F5),
+                      //   shadowColor: Colors.white,
+                      //   avatar: Icon(Icons.refresh),
+                      //   label: Text('Updating'),
+                      // ),
                       Hero(
                         tag: 'weather_icon',
                         child: Image.asset(
-                          'assets/images/28.png',
+                          'assets/images/cloud.png',
                           fit: BoxFit.scaleDown,
                           height: 180,
                           width: 210,
@@ -245,7 +259,11 @@ class _HomeViewState extends State<HomeView> {
                               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                               children: [
                                 Text('23'),
-                                Icon(Icons.add_box),
+                                SizedBox(
+                                    width: 30.0,
+                                    height: 40.0,
+                                    child: Image.asset(
+                                        'assets/images/lightning.png')),
                                 Text('11.00')
                               ],
                             ),

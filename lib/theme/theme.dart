@@ -7,4 +7,6 @@ final customTheme = ThemeData(
   backgroundColor: Colors.black,
   accentColor: Colors.white,
   dividerColor: Colors.black,
+  scaffoldBackgroundColor: Colors.black,
+  fontFamily: 'Bw Seido',
 );
