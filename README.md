@@ -2,6 +2,11 @@
 
 A beautiful weather app made with love in Flutter.
 
+### TODO
+- [ ] Refactor
+- [ ] Add functionalities
+- [ ] Bloc Pattern
+
 Concept:
 ![](https://raw.githubusercontent.com/Harishwarrior/weather_app/master/pictures/demo.jpg) 
 
