@@ -25,7 +25,7 @@ class _ForecastViewState extends State<ForecastView> {
                   boxShadow: [
                     BoxShadow(
                         color: Color(0xFF064090),
-                        offset: Offset(0, 23),
+                        offset: Offset(0, 25),
                         blurRadius: 3,
                         spreadRadius: -10)
                   ],
@@ -73,14 +73,11 @@ class _ForecastViewState extends State<ForecastView> {
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceAround,
                       children: [
-                        Hero(
-                          tag: 'weather_icon',
-                          child: Image.asset(
-                            'assets/images/28.png',
-                            fit: BoxFit.scaleDown,
-                            height: 100,
-                            width: 150,
-                          ),
+                        Image.asset(
+                          'assets/images/rainy.png',
+                          fit: BoxFit.scaleDown,
+                          height: 140,
+                          width: 150,
                         ),
                         Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
@@ -95,7 +92,7 @@ class _ForecastViewState extends State<ForecastView> {
                               textBaseline: TextBaseline.ideographic,
                               children: [
                                 Text(
-                                  '23',
+                                  '20',
                                   style: TextStyle(
                                       fontSize: 80.0,
                                       fontWeight: FontWeight.bold),
@@ -110,8 +107,10 @@ class _ForecastViewState extends State<ForecastView> {
                               ],
                             ),
                             Text(
-                              'Thunderstorm',
-                              style: TextStyle(fontSize: 20.0),
+                              'Rainy-Cloudy',
+                              style: TextStyle(
+                                  fontSize: 15,
+                                  color: Colors.white.withOpacity(0.5)),
                             ),
                           ],
                         ),
@@ -201,9 +200,11 @@ class _ForecastViewState extends State<ForecastView> {
                       title: Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          Icon(Icons.add),
+                          SizedBox(
+                              height: 30.0,
+                              child: Image.asset('assets/images/storm.png')),
                           Text(
-                            'Rainy',
+                            ' Rainy',
                             style: TextStyle(
                                 fontWeight: FontWeight.bold,
                                 color: Colors.white.withOpacity(0.5)),
@@ -214,7 +215,7 @@ class _ForecastViewState extends State<ForecastView> {
                         mainAxisSize: MainAxisSize.min,
                         children: [
                           Text(
-                            '+20',
+                            '+20°',
                             style: TextStyle(fontWeight: FontWeight.bold),
                           ),
                           Text(
@@ -236,9 +237,11 @@ class _ForecastViewState extends State<ForecastView> {
                       title: Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          Icon(Icons.add),
+                          SizedBox(
+                              height: 30.0,
+                              child: Image.asset('assets/images/rainy.png')),
                           Text(
-                            'Rainy',
+                            ' Rainy',
                             style: TextStyle(
                                 fontWeight: FontWeight.bold,
                                 color: Colors.white.withOpacity(0.5)),
@@ -249,11 +252,11 @@ class _ForecastViewState extends State<ForecastView> {
                         mainAxisSize: MainAxisSize.min,
                         children: [
                           Text(
-                            '+20',
+                            '+22°',
                             style: TextStyle(fontWeight: FontWeight.bold),
                           ),
                           Text(
-                            ' +14',
+                            ' +16',
                             style: TextStyle(
                                 color: Colors.white.withOpacity(0.5),
                                 fontWeight: FontWeight.bold),
@@ -271,9 +274,11 @@ class _ForecastViewState extends State<ForecastView> {
                       title: Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          Icon(Icons.add),
+                          SizedBox(
+                              height: 30.0,
+                              child: Image.asset('assets/images/storm.png')),
                           Text(
-                            'Storm',
+                            ' Storm',
                             style: TextStyle(
                                 fontWeight: FontWeight.bold,
                                 color: Colors.white.withOpacity(0.5)),
@@ -284,11 +289,11 @@ class _ForecastViewState extends State<ForecastView> {
                         mainAxisSize: MainAxisSize.min,
                         children: [
                           Text(
-                            '+20',
+                            '+19°',
                             style: TextStyle(fontWeight: FontWeight.bold),
                           ),
                           Text(
-                            ' +14',
+                            ' +13',
                             style: TextStyle(
                                 color: Colors.white.withOpacity(0.5),
                                 fontWeight: FontWeight.bold),
@@ -306,9 +311,11 @@ class _ForecastViewState extends State<ForecastView> {
                       title: Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          Icon(Icons.add),
+                          SizedBox(
+                              height: 30.0,
+                              child: Image.asset('assets/images/slow.png')),
                           Text(
-                            'Slow',
+                            ' Slow',
                             style: TextStyle(
                                 fontWeight: FontWeight.bold,
                                 color: Colors.white.withOpacity(0.5)),
@@ -319,11 +326,11 @@ class _ForecastViewState extends State<ForecastView> {
                         mainAxisSize: MainAxisSize.min,
                         children: [
                           Text(
-                            '+20',
+                            '+18°',
                             style: TextStyle(fontWeight: FontWeight.bold),
                           ),
                           Text(
-                            ' +14',
+                            ' +12',
                             style: TextStyle(
                                 color: Colors.white.withOpacity(0.5),
                                 fontWeight: FontWeight.bold),
@@ -341,9 +348,11 @@ class _ForecastViewState extends State<ForecastView> {
                       title: Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          Icon(Icons.add),
+                          SizedBox(
+                              height: 30.0,
+                              child: Image.asset('assets/images/thunder.png')),
                           Text(
-                            'Thunder',
+                            ' Thunder',
                             style: TextStyle(
                                 fontWeight: FontWeight.bold,
                                 color: Colors.white.withOpacity(0.5)),
@@ -354,11 +363,11 @@ class _ForecastViewState extends State<ForecastView> {
                         mainAxisSize: MainAxisSize.min,
                         children: [
                           Text(
-                            '+20',
+                            '+23°',
                             style: TextStyle(fontWeight: FontWeight.bold),
                           ),
                           Text(
-                            ' +14',
+                            ' +19',
                             style: TextStyle(
                                 color: Colors.white.withOpacity(0.5),
                                 fontWeight: FontWeight.bold),
@@ -376,9 +385,11 @@ class _ForecastViewState extends State<ForecastView> {
                       title: Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          Icon(Icons.add),
+                          SizedBox(
+                              height: 30.0,
+                              child: Image.asset('assets/images/rainy.png')),
                           Text(
-                            'Rainy',
+                            ' Rainy',
                             style: TextStyle(
                                 fontWeight: FontWeight.bold,
                                 color: Colors.white.withOpacity(0.5)),
@@ -389,11 +400,11 @@ class _ForecastViewState extends State<ForecastView> {
                         mainAxisSize: MainAxisSize.min,
                         children: [
                           Text(
-                            '+20',
+                            '+25°',
                             style: TextStyle(fontWeight: FontWeight.bold),
                           ),
                           Text(
-                            ' +14',
+                            ' +17',
                             style: TextStyle(
                                 color: Colors.white.withOpacity(0.5),
                                 fontWeight: FontWeight.bold),
@@ -411,9 +422,11 @@ class _ForecastViewState extends State<ForecastView> {
                       title: Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          Icon(Icons.add),
+                          SizedBox(
+                              height: 30.0,
+                              child: Image.asset('assets/images/storm.png')),
                           Text(
-                            'Storm',
+                            ' Storm',
                             style: TextStyle(
                                 fontWeight: FontWeight.bold,
                                 color: Colors.white.withOpacity(0.5)),
@@ -424,11 +437,11 @@ class _ForecastViewState extends State<ForecastView> {
                         mainAxisSize: MainAxisSize.min,
                         children: [
                           Text(
-                            '+20',
+                            '+21°',
                             style: TextStyle(fontWeight: FontWeight.bold),
                           ),
                           Text(
-                            ' +14',
+                            ' +18',
                             style: TextStyle(
                                 color: Colors.white.withOpacity(0.5),
                                 fontWeight: FontWeight.bold),

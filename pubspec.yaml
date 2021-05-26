@@ -61,9 +61,9 @@ flutter:
   # list giving the asset and other descriptors for the font. For
   # example:
   fonts:
-  - family: Bw Seido
+  - family: Rubik
     fonts:
-      - asset: assets/fonts/BwSeidoRoundMedium.otf
+      - asset: assets/fonts/Rubik-Regular.ttf
 
   #   - family: Trajan Pro
   #     fonts:

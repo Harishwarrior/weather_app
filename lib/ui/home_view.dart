@@ -31,7 +31,7 @@ class _HomeViewState extends State<HomeView> {
                     boxShadow: [
                       BoxShadow(
                           color: Color(0xFF064090),
-                          offset: Offset(0, 23),
+                          offset: Offset(0, 25),
                           blurRadius: 3,
                           spreadRadius: -10)
                     ],
@@ -73,7 +73,8 @@ class _HomeViewState extends State<HomeView> {
                         ],
                       ),
                       Container(
-                        padding: EdgeInsets.all(5.0),
+                        margin: EdgeInsets.all(10.0),
+                        padding: EdgeInsets.all(8.0),
                         child: Text(
                           '.  Updating',
                           style: TextStyle(fontSize: 12.0),
@@ -88,20 +89,17 @@ class _HomeViewState extends State<HomeView> {
                       //   avatar: Icon(Icons.refresh),
                       //   label: Text('Updating'),
                       // ),
-                      Hero(
-                        tag: 'weather_icon',
-                        child: Image.asset(
-                          'assets/images/cloud.png',
-                          fit: BoxFit.scaleDown,
-                          height: 180,
-                          width: 210,
-                        ),
+                      Image.asset(
+                        'assets/images/storm.png',
+                        fit: BoxFit.scaleDown,
+                        height: 180,
+                        width: 210,
                       ),
                       Row(
                         mainAxisSize: MainAxisSize.min,
                         children: [
                           Text(
-                            '23',
+                            '21',
                             style: TextStyle(
                                 fontSize: 140.0, fontWeight: FontWeight.bold),
                           ),
@@ -230,9 +228,16 @@ class _HomeViewState extends State<HomeView> {
                             child: Column(
                               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                               children: [
-                                Text('23'),
-                                Icon(Icons.add_box),
-                                Text('11.00')
+                                Text('23°'),
+                                SizedBox(
+                                    height: 45.0,
+                                    child:
+                                        Image.asset('assets/images/rainy.png')),
+                                Text(
+                                  '10.00',
+                                  style: TextStyle(
+                                      color: Colors.white.withOpacity(0.5)),
+                                )
                               ],
                             ),
                           ),
@@ -258,13 +263,16 @@ class _HomeViewState extends State<HomeView> {
                             child: Column(
                               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                               children: [
-                                Text('23'),
+                                Text('21°'),
                                 SizedBox(
-                                    width: 30.0,
                                     height: 40.0,
                                     child: Image.asset(
-                                        'assets/images/lightning.png')),
-                                Text('11.00')
+                                        'assets/images/thunder.png')),
+                                Text(
+                                  '11.00',
+                                  style: TextStyle(
+                                      color: Colors.white.withOpacity(0.5)),
+                                )
                               ],
                             ),
                           ),
@@ -281,9 +289,16 @@ class _HomeViewState extends State<HomeView> {
                             child: Column(
                               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                               children: [
-                                Text('23'),
-                                Icon(Icons.add_box),
-                                Text('11.00')
+                                Text('22°'),
+                                SizedBox(
+                                    height: 45.0,
+                                    child:
+                                        Image.asset('assets/images/rainy.png')),
+                                Text(
+                                  '12.00',
+                                  style: TextStyle(
+                                      color: Colors.white.withOpacity(0.5)),
+                                )
                               ],
                             ),
                           ),
@@ -300,9 +315,16 @@ class _HomeViewState extends State<HomeView> {
                             child: Column(
                               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                               children: [
-                                Text('23'),
-                                Icon(Icons.add_box),
-                                Text('11.00')
+                                Text('19°'),
+                                SizedBox(
+                                    height: 40.0,
+                                    child: Image.asset(
+                                        'assets/images/nightwind.png')),
+                                Text(
+                                  '01.00',
+                                  style: TextStyle(
+                                      color: Colors.white.withOpacity(0.5)),
+                                )
                               ],
                             ),
                           ),

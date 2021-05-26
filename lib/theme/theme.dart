@@ -8,5 +8,5 @@ final customTheme = ThemeData(
   accentColor: Colors.white,
   dividerColor: Colors.black,
   scaffoldBackgroundColor: Colors.black,
-  fontFamily: 'Bw Seido',
+  fontFamily: 'Rubik',
 );
