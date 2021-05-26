@@ -3,7 +3,8 @@
 A beautiful weather app made with love in Flutter.
 
 ### TODO
-- [ ] Refactor
+
+- [ ] Refactor (Extract widgets)
 - [ ] Add functionalities
 - [ ] Bloc Pattern
 
