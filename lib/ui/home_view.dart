@@ -2,6 +2,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:weather_app/theme/theme.dart';
 import 'package:weather_app/ui/forecast_view.dart';
+import 'package:weather_app/ui/widgets/time_weather_tile.dart';
+import 'package:weather_app/ui/widgets/weather_overview.dart';
 import 'package:weather_app/utils/media_query.dart';
 
 class HomeView extends StatefulWidget {
@@ -26,8 +28,6 @@ class _HomeViewState extends State<HomeView> {
                   decoration: BoxDecoration(
                     border: Border.all(width: 0.2, color: Colors.white),
                     borderRadius: BorderRadius.circular(45),
-                    // borderRadius:
-                    //     BorderRadius.vertical(bottom: Radius.circular(50.0)),
                     boxShadow: [
                       BoxShadow(
                           color: Color(0xFF064090),
@@ -83,12 +83,6 @@ class _HomeViewState extends State<HomeView> {
                             border: Border.all(width: 0.4, color: Colors.white),
                             borderRadius: BorderRadius.circular(25.0)),
                       ),
-                      // Chip(
-                      //   backgroundColor: Color(0xFF14B1F5),
-                      //   shadowColor: Colors.white,
-                      //   avatar: Icon(Icons.refresh),
-                      //   label: Text('Updating'),
-                      // ),
                       Image.asset(
                         'assets/images/storm.png',
                         fit: BoxFit.scaleDown,
@@ -131,56 +125,20 @@ class _HomeViewState extends State<HomeView> {
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                           children: [
-                            Column(
-                              children: [
-                                Image.asset(
-                                  'assets/images/wind.png',
-                                  color: Colors.white.withOpacity(0.7),
-                                ),
-                                SizedBox(
-                                  height: 5.0,
-                                ),
-                                Text('13km/hr'),
-                                Text(
-                                  'Wind',
-                                  style: TextStyle(
-                                      color: Colors.white.withOpacity(0.5)),
-                                ),
-                              ],
+                            WeatherOverview(
+                              rate: '13km/hr',
+                              iconPath: 'assets/images/wind.png',
+                              type: 'Wind',
                             ),
-                            Column(
-                              children: [
-                                Image.asset(
-                                  'assets/images/drop.png',
-                                  color: Colors.white.withOpacity(0.7),
-                                ),
-                                SizedBox(
-                                  height: 5.0,
-                                ),
-                                Text('24%'),
-                                Text(
-                                  'Humidity',
-                                  style: TextStyle(
-                                      color: Colors.white.withOpacity(0.5)),
-                                ),
-                              ],
+                            WeatherOverview(
+                              iconPath: 'assets/images/drop.png',
+                              rate: '24%',
+                              type: 'Humidity',
                             ),
-                            Column(
-                              children: [
-                                Image.asset(
-                                  'assets/images/water.png',
-                                  color: Colors.white.withOpacity(0.7),
-                                ),
-                                SizedBox(
-                                  height: 5.0,
-                                ),
-                                Text('87%'),
-                                Text(
-                                  'Precipitation',
-                                  style: TextStyle(
-                                      color: Colors.white.withOpacity(0.5)),
-                                ),
-                              ],
+                            WeatherOverview(
+                              iconPath: 'assets/images/water.png',
+                              rate: '87%',
+                              type: 'Precipitation',
                             ),
                           ],
                         ),
@@ -215,32 +173,10 @@ class _HomeViewState extends State<HomeView> {
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceAround,
                         children: [
-                          Container(
-                            height: displayHeight(context) * 0.15,
-                            width: displayWidth(context) * 0.20,
-                            decoration: BoxDecoration(
-                              border:
-                                  Border.all(width: 0.03, color: Colors.white),
-                              borderRadius: BorderRadius.all(Radius.circular(
-                                      25.0) //                 <--- border radius here
-                                  ),
-                            ),
-                            child: Column(
-                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                              children: [
-                                Text('23°'),
-                                SizedBox(
-                                    height: 45.0,
-                                    child:
-                                        Image.asset('assets/images/rainy.png')),
-                                Text(
-                                  '10.00',
-                                  style: TextStyle(
-                                      color: Colors.white.withOpacity(0.5)),
-                                )
-                              ],
-                            ),
-                          ),
+                          TimeWeatherTile(
+                              temp: '23°',
+                              iconPath: 'assets/images/rainy.png',
+                              time: '10.00'),
                           Container(
                             height: displayHeight(context) * 0.15,
                             width: displayWidth(context) * 0.20,
@@ -276,57 +212,14 @@ class _HomeViewState extends State<HomeView> {
                               ],
                             ),
                           ),
-                          Container(
-                            height: displayHeight(context) * 0.15,
-                            width: displayWidth(context) * 0.20,
-                            decoration: BoxDecoration(
-                              border:
-                                  Border.all(width: 0.03, color: Colors.white),
-                              borderRadius: BorderRadius.all(Radius.circular(
-                                      25.0) //                 <--- border radius here
-                                  ),
-                            ),
-                            child: Column(
-                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                              children: [
-                                Text('22°'),
-                                SizedBox(
-                                    height: 45.0,
-                                    child:
-                                        Image.asset('assets/images/rainy.png')),
-                                Text(
-                                  '12.00',
-                                  style: TextStyle(
-                                      color: Colors.white.withOpacity(0.5)),
-                                )
-                              ],
-                            ),
-                          ),
-                          Container(
-                            height: displayHeight(context) * 0.15,
-                            width: displayWidth(context) * 0.20,
-                            decoration: BoxDecoration(
-                              border:
-                                  Border.all(width: 0.03, color: Colors.white),
-                              borderRadius: BorderRadius.all(Radius.circular(
-                                      25.0) //                 <--- border radius here
-                                  ),
-                            ),
-                            child: Column(
-                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                              children: [
-                                Text('19°'),
-                                SizedBox(
-                                    height: 40.0,
-                                    child: Image.asset(
-                                        'assets/images/nightwind.png')),
-                                Text(
-                                  '01.00',
-                                  style: TextStyle(
-                                      color: Colors.white.withOpacity(0.5)),
-                                )
-                              ],
-                            ),
+                          TimeWeatherTile(
+                              temp: '22°',
+                              iconPath: 'assets/images/rainy.png',
+                              time: '12.00'),
+                          TimeWeatherTile(
+                            temp: '19°',
+                            iconPath: 'assets/images/nightwind.png',
+                            time: '01.00',
                           ),
                         ],
                       ),

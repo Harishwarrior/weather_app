@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:weather_app/theme/theme.dart';
+import 'package:weather_app/ui/widgets/weather_overview.dart';
 
 class ForecastView extends StatefulWidget {
   ForecastView({Key? key}) : super(key: key);
@@ -204,38 +205,6 @@ class _ForecastViewState extends State<ForecastView> {
           ),
         ),
       ),
-    );
-  }
-}
-
-class WeatherOverview extends StatelessWidget {
-  final String iconPath;
-  final String rate;
-  final String type;
-  const WeatherOverview({
-    Key? key,
-    required this.iconPath,
-    required this.rate,
-    required this.type,
-  }) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Column(
-      children: [
-        Image.asset(
-          this.iconPath,
-          color: Colors.white.withOpacity(0.7),
-        ),
-        SizedBox(
-          height: 5.0,
-        ),
-        Text(this.rate),
-        Text(
-          this.type,
-          style: TextStyle(color: Colors.white.withOpacity(0.5)),
-        ),
-      ],
     );
   }
 }
