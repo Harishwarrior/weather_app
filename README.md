@@ -1,7 +1,6 @@
 # weather_app
 
 A beautiful weather app made with love in Flutter. 
-Sorry for the messy code, will refactor it asap.
 
 ### TODO
 
