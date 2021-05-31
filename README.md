@@ -5,7 +5,7 @@ Sorry for the messy code, will refactor it asap.
 
 ### TODO
 
-- [x] Refactor (Extract widgets)
+- [x] ~~Refactor (Extract widgets)~~
 - [ ] Add functionalities
 - [ ] Bloc Pattern
 
