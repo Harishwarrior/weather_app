@@ -128,56 +128,20 @@ class _ForecastViewState extends State<ForecastView> {
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [
-                          Column(
-                            children: [
-                              Image.asset(
-                                'assets/images/wind.png',
-                                color: Colors.white.withOpacity(0.7),
-                              ),
-                              SizedBox(
-                                height: 5.0,
-                              ),
-                              Text('13km/hr'),
-                              Text(
-                                'Wind',
-                                style: TextStyle(
-                                    color: Colors.white.withOpacity(0.5)),
-                              ),
-                            ],
+                          WeatherOverview(
+                            rate: '13km/hr',
+                            iconPath: 'assets/images/wind.png',
+                            type: 'Wind',
                           ),
-                          Column(
-                            children: [
-                              Image.asset(
-                                'assets/images/drop.png',
-                                color: Colors.white.withOpacity(0.7),
-                              ),
-                              SizedBox(
-                                height: 5.0,
-                              ),
-                              Text('24%'),
-                              Text(
-                                'Humidity',
-                                style: TextStyle(
-                                    color: Colors.white.withOpacity(0.5)),
-                              ),
-                            ],
+                          WeatherOverview(
+                            iconPath: 'assets/images/drop.png',
+                            rate: '24%',
+                            type: 'Humidity',
                           ),
-                          Column(
-                            children: [
-                              Image.asset(
-                                'assets/images/water.png',
-                                color: Colors.white.withOpacity(0.7),
-                              ),
-                              SizedBox(
-                                height: 5.0,
-                              ),
-                              Text('87%'),
-                              Text(
-                                'Precipitation',
-                                style: TextStyle(
-                                    color: Colors.white.withOpacity(0.5)),
-                              ),
-                            ],
+                          WeatherOverview(
+                            iconPath: 'assets/images/water.png',
+                            rate: '87%',
+                            type: 'Precipitation',
                           ),
                         ],
                       ),
@@ -190,271 +154,141 @@ class _ForecastViewState extends State<ForecastView> {
                 child: ListView(
                   shrinkWrap: true,
                   children: [
-                    ListTile(
-                      leading: Text(
-                        'Mon',
-                        style: TextStyle(
-                            fontWeight: FontWeight.bold,
-                            color: Colors.white.withOpacity(0.5)),
-                      ),
-                      title: Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          SizedBox(
-                              height: 30.0,
-                              child: Image.asset('assets/images/storm.png')),
-                          Text(
-                            ' Rainy',
-                            style: TextStyle(
-                                fontWeight: FontWeight.bold,
-                                color: Colors.white.withOpacity(0.5)),
-                          )
-                        ],
-                      ),
-                      trailing: Row(
-                        mainAxisSize: MainAxisSize.min,
-                        children: [
-                          Text(
-                            '+20°',
-                            style: TextStyle(fontWeight: FontWeight.bold),
-                          ),
-                          Text(
-                            ' +14',
-                            style: TextStyle(
-                                color: Colors.white.withOpacity(0.5),
-                                fontWeight: FontWeight.bold),
-                          )
-                        ],
-                      ),
+                    WeekTile(
+                      iconPath: 'assets/images/storm.png',
+                      day: 'Mon',
+                      weatherType: ' Rainy',
+                      temp: '+20°',
+                      tempAvg: ' +14',
                     ),
-                    ListTile(
-                      leading: Text(
-                        'Tue',
-                        style: TextStyle(
-                            fontWeight: FontWeight.bold,
-                            color: Colors.white.withOpacity(0.5)),
-                      ),
-                      title: Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          SizedBox(
-                              height: 30.0,
-                              child: Image.asset('assets/images/rainy.png')),
-                          Text(
-                            ' Rainy',
-                            style: TextStyle(
-                                fontWeight: FontWeight.bold,
-                                color: Colors.white.withOpacity(0.5)),
-                          )
-                        ],
-                      ),
-                      trailing: Row(
-                        mainAxisSize: MainAxisSize.min,
-                        children: [
-                          Text(
-                            '+22°',
-                            style: TextStyle(fontWeight: FontWeight.bold),
-                          ),
-                          Text(
-                            ' +16',
-                            style: TextStyle(
-                                color: Colors.white.withOpacity(0.5),
-                                fontWeight: FontWeight.bold),
-                          )
-                        ],
-                      ),
-                    ),
-                    ListTile(
-                      leading: Text(
-                        'Wed',
-                        style: TextStyle(
-                            fontWeight: FontWeight.bold,
-                            color: Colors.white.withOpacity(0.5)),
-                      ),
-                      title: Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          SizedBox(
-                              height: 30.0,
-                              child: Image.asset('assets/images/storm.png')),
-                          Text(
-                            ' Storm',
-                            style: TextStyle(
-                                fontWeight: FontWeight.bold,
-                                color: Colors.white.withOpacity(0.5)),
-                          )
-                        ],
-                      ),
-                      trailing: Row(
-                        mainAxisSize: MainAxisSize.min,
-                        children: [
-                          Text(
-                            '+19°',
-                            style: TextStyle(fontWeight: FontWeight.bold),
-                          ),
-                          Text(
-                            ' +13',
-                            style: TextStyle(
-                                color: Colors.white.withOpacity(0.5),
-                                fontWeight: FontWeight.bold),
-                          )
-                        ],
-                      ),
-                    ),
-                    ListTile(
-                      leading: Text(
-                        'Thu',
-                        style: TextStyle(
-                            fontWeight: FontWeight.bold,
-                            color: Colors.white.withOpacity(0.5)),
-                      ),
-                      title: Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          SizedBox(
-                              height: 30.0,
-                              child: Image.asset('assets/images/slow.png')),
-                          Text(
-                            ' Slow',
-                            style: TextStyle(
-                                fontWeight: FontWeight.bold,
-                                color: Colors.white.withOpacity(0.5)),
-                          )
-                        ],
-                      ),
-                      trailing: Row(
-                        mainAxisSize: MainAxisSize.min,
-                        children: [
-                          Text(
-                            '+18°',
-                            style: TextStyle(fontWeight: FontWeight.bold),
-                          ),
-                          Text(
-                            ' +12',
-                            style: TextStyle(
-                                color: Colors.white.withOpacity(0.5),
-                                fontWeight: FontWeight.bold),
-                          )
-                        ],
-                      ),
-                    ),
-                    ListTile(
-                      leading: Text(
-                        'Fri',
-                        style: TextStyle(
-                            fontWeight: FontWeight.bold,
-                            color: Colors.white.withOpacity(0.5)),
-                      ),
-                      title: Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          SizedBox(
-                              height: 30.0,
-                              child: Image.asset('assets/images/thunder.png')),
-                          Text(
-                            ' Thunder',
-                            style: TextStyle(
-                                fontWeight: FontWeight.bold,
-                                color: Colors.white.withOpacity(0.5)),
-                          )
-                        ],
-                      ),
-                      trailing: Row(
-                        mainAxisSize: MainAxisSize.min,
-                        children: [
-                          Text(
-                            '+23°',
-                            style: TextStyle(fontWeight: FontWeight.bold),
-                          ),
-                          Text(
-                            ' +19',
-                            style: TextStyle(
-                                color: Colors.white.withOpacity(0.5),
-                                fontWeight: FontWeight.bold),
-                          )
-                        ],
-                      ),
-                    ),
-                    ListTile(
-                      leading: Text(
-                        'Sat',
-                        style: TextStyle(
-                            fontWeight: FontWeight.bold,
-                            color: Colors.white.withOpacity(0.5)),
-                      ),
-                      title: Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          SizedBox(
-                              height: 30.0,
-                              child: Image.asset('assets/images/rainy.png')),
-                          Text(
-                            ' Rainy',
-                            style: TextStyle(
-                                fontWeight: FontWeight.bold,
-                                color: Colors.white.withOpacity(0.5)),
-                          )
-                        ],
-                      ),
-                      trailing: Row(
-                        mainAxisSize: MainAxisSize.min,
-                        children: [
-                          Text(
-                            '+25°',
-                            style: TextStyle(fontWeight: FontWeight.bold),
-                          ),
-                          Text(
-                            ' +17',
-                            style: TextStyle(
-                                color: Colors.white.withOpacity(0.5),
-                                fontWeight: FontWeight.bold),
-                          )
-                        ],
-                      ),
-                    ),
-                    ListTile(
-                      leading: Text(
-                        'Sun',
-                        style: TextStyle(
-                            fontWeight: FontWeight.bold,
-                            color: Colors.white.withOpacity(0.5)),
-                      ),
-                      title: Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          SizedBox(
-                              height: 30.0,
-                              child: Image.asset('assets/images/storm.png')),
-                          Text(
-                            ' Storm',
-                            style: TextStyle(
-                                fontWeight: FontWeight.bold,
-                                color: Colors.white.withOpacity(0.5)),
-                          )
-                        ],
-                      ),
-                      trailing: Row(
-                        mainAxisSize: MainAxisSize.min,
-                        children: [
-                          Text(
-                            '+21°',
-                            style: TextStyle(fontWeight: FontWeight.bold),
-                          ),
-                          Text(
-                            ' +18',
-                            style: TextStyle(
-                                color: Colors.white.withOpacity(0.5),
-                                fontWeight: FontWeight.bold),
-                          )
-                        ],
-                      ),
-                    ),
+                    WeekTile(
+                        day: 'Tue',
+                        iconPath: 'assets/images/rainy.png',
+                        weatherType: ' Rainy',
+                        temp: '+22°',
+                        tempAvg: ' +16'),
+                    WeekTile(
+                        day: 'Wed',
+                        iconPath: 'assets/images/storm.png',
+                        weatherType: ' Storm',
+                        temp: '+19°',
+                        tempAvg: ' +13'),
+                    WeekTile(
+                        day: 'Thu',
+                        iconPath: 'assets/images/slow.png',
+                        weatherType: ' Slow',
+                        temp: '+18°',
+                        tempAvg: ' +12'),
+                    WeekTile(
+                        day: 'Fri',
+                        iconPath: 'assets/images/thunder.png',
+                        weatherType: ' Thunder',
+                        temp: '+23°',
+                        tempAvg: ' +19'),
+                    WeekTile(
+                        day: 'Sat',
+                        iconPath: 'assets/images/rainy.png',
+                        weatherType: ' Rainy',
+                        temp: '+25°',
+                        tempAvg: ' +17'),
+                    WeekTile(
+                        day: 'Sun',
+                        iconPath: 'assets/images/storm.png',
+                        weatherType: ' Storm',
+                        temp: '+21°',
+                        tempAvg: ' +18'),
                   ],
                 ),
               )
             ],
           ),
         ),
+      ),
+    );
+  }
+}
+
+class WeatherOverview extends StatelessWidget {
+  final String iconPath;
+  final String rate;
+  final String type;
+  const WeatherOverview({
+    Key? key,
+    required this.iconPath,
+    required this.rate,
+    required this.type,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      children: [
+        Image.asset(
+          this.iconPath,
+          color: Colors.white.withOpacity(0.7),
+        ),
+        SizedBox(
+          height: 5.0,
+        ),
+        Text(this.rate),
+        Text(
+          this.type,
+          style: TextStyle(color: Colors.white.withOpacity(0.5)),
+        ),
+      ],
+    );
+  }
+}
+
+class WeekTile extends StatelessWidget {
+  final String day;
+  final String iconPath;
+  final String weatherType;
+  final String temp;
+  final String tempAvg;
+  const WeekTile({
+    Key? key,
+    required this.day,
+    required this.iconPath,
+    required this.weatherType,
+    required this.temp,
+    required this.tempAvg,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return ListTile(
+      leading: Text(
+        this.day,
+        style: TextStyle(
+            fontWeight: FontWeight.bold, color: Colors.white.withOpacity(0.5)),
+      ),
+      title: Row(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          SizedBox(height: 30.0, child: Image.asset(this.iconPath)),
+          Text(
+            this.weatherType,
+            style: TextStyle(
+                fontWeight: FontWeight.bold,
+                color: Colors.white.withOpacity(0.5)),
+          )
+        ],
+      ),
+      trailing: Row(
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          Text(
+            this.temp,
+            style: TextStyle(fontWeight: FontWeight.bold),
+          ),
+          Text(
+            this.tempAvg,
+            style: TextStyle(
+                color: Colors.white.withOpacity(0.5),
+                fontWeight: FontWeight.bold),
+          )
+        ],
       ),
     );
   }
