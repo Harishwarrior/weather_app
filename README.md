@@ -1,6 +1,6 @@
 # weather_app
 
-A beautiful weather app made with love in Flutter. 
+A beautiful weather app made in Flutter. 
 
 ### TODO
 
